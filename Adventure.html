@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title> Adventure Game</title>
+    </head>
+<body>
+    <h1> Adventure Game</h1>
+    <p> Made By: Nicole Sad</p>
+    <script>
+        
+        Start();
+        
+        function Start(){
+            var playerName = prompt("What's your name, traveller?");
+            alert("Welcome to Jupiter, " + playerName + "!");
+            var startGame = confirm("Are you ready to begin your adventure?")
+            if(startGame){
+                Village();
+                
+            }
+            else{
+                alert("Goodbye!");
+            }
+            
+        }
+        
+        function Village(){
+            var village = prompt("Youarrive at a small village. There is a blacksmith, inn, stable, and several wooden homes").toLoweCase();
+            
+            switch(village) {
+                      case "blacksmith":
+                    alert("The blacksmith scowls at you and mumbles rude words. You walk away, intimidated.")
+                    break;
+                case "inn":
+                    "You enter the old and weathered inn. There's a woman at the front desk, stairs to the east, and an adjacent room to the west")
+                    break;
+                case "stable":
+                    alert("at the stable")
+                    break;
+                case "wood homes":
+                    alert("There are too many to choose from!")
+                    break;
+                case "wooden homes";
+                    alert("There are too many to choose from!")
+                    break;
+                default;
+                    alert("I don't know that command, sorry!")
+                    break; 
+                    
+                          }
+                  }
+                          
+                          
+        
+     
+    </script>
+</body>
+</html>
