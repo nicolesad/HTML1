@@ -1,12 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title> Adventure Game</title>
+        <title> Adventure Game </title>
     </head>
 <body>
     <h1> Adventure Game</h1>
     <p> Made By: Nicole Sad</p>
     <script>
+        
+        //Inventory System
+        var inventory = {
+            sword:0,
+            bread:0,
+            meat:0,
+            fish:0,
+            goldkey:0;
+        }
         
         Start();
         
@@ -25,11 +34,17 @@
         }
         
         function Village(){
-            var village = prompt("Youarrive at a small village. There is a blacksmith, inn, stable, and several wooden homes").toLoweCase();
+            var village = prompt("You arrive at a small village. There is a blacksmith, inn, stable, and several wooden homes").toLowerCase();
             
             switch(village) {
                       case "blacksmith":
-                    alert("The blacksmith scowls at you and mumbles rude words. You walk away, intimidated.")
+                    alert("The blacksmith scowls at you and mumbles rude words. You walk away, intimidated.");
+                    var blacksmith = prompt ("buy sword");
+                    if(blacksmith == "buy sword") {
+                    alert("you bought a sword");
+                    inventory.sword ++;
+                    alert("swords = "+ inventory.sword);
+                    }
                     break;
                 case "inn":
                     "You enter the old and weathered inn. There's a woman at the front desk, stairs to the east, and an adjacent room to the west")
