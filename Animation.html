@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+    <style>
+        #container {
+            width: 400px;
+            height: 400px;
+            position: relative;
+            background: LightSlateGray;
+        }
+        #animate {
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            background: "https://tinyurl.com/y9uczoec";
+        }
+    </style>
+    
+        <body>
+        
+        <h1>My First JavaScript Animation</h1>
+
+        <div id="animation">My animation will go here</div>
+        <div id = "container">
+            <div id="animate">Nicole RAD</div>
+        </div>
+            <button type="button" onclick="myMove()">
+                Click Me!</button>
+        <script>
+
+            function myMove() {
+            var elem = document.getElementById("animate");
+                var pos = 0;
+                var id = setInterval(frame, 5);
+                function frame() {
+                    if (pos == 100) {
+                        clearInterval(id);
+                    }
+                    else {
+                        pos ++;
+                        elem.style.top = pos + 'px';
+                        elem.style.left = pos + 'px';
+                    }
+                }
+            }
+            </script>
+        
+    </body>
+</html>
