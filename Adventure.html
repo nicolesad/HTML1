@@ -20,11 +20,11 @@
         Start();
         
         function Start(){
-            var playerName = prompt("What's your name, traveller?");
-            alert("Welcome to Jupiter, " + playerName + "!");
-            var startGame = confirm("Are you ready to begin your adventure?")
+            var playerName = prompt("SCIENTIST: Hello, what would you like to be called?");
+            alert("SCIENTIST: Welcome, " + playerName + "! You're among about 200 robots that we, the people of Jupiter, have created to explore this new land. Let me put " + playerName + "on your backpack and the registry. We're having you all board onto the ship to get started.");
+            var startGame = confirm("Are you ready to go?")
             if(startGame){
-                Village();
+                Ship();
                 
             }
             else{
@@ -33,30 +33,30 @@
             
         }
         
-        function Village(){
-            var village = prompt("You arrive at a small village. There is a blacksmith, inn, stable, and several wooden homes").toLowerCase();
+        function Ship(){
+            var ship = prompt("THE SHIP BOARDS, DIFFERENT COLORED ROBOTS ALL AROUND. YOU LOOK AT YOUR HANDS AND NOTICE THEY'RE BLUE, JUST AS THE SHIP JOLTS FORWARD AND ACCELERATES. AFTER A FEW SECONDS, THE SHIP SLOWS AND THE DOORS OPEN. YOU FOLLOW EVERYONE OUT ONTO THE SAND OUTSIDE, THE SUN BLARING DOWN. THE ROBOTS BEGIN TO DISPERSE - INSPECTING THEIR BACKPACKS, WALKING TOWARDS THE POND, AND HIKING UP THE NEARBY MOUNTAIN. WHAT WOULD YOU LIKE TO DO?").toLowerCase();
             
-            switch(village) {
-                      case "blacksmith":
-                    alert("The blacksmith scowls at you and mumbles rude words. You walk away, intimidated.");
-                    var blacksmith = prompt ("buy sword");
+            switch(ship) {
+                      case "inspect backpack":
+                    alert("THERE IS AN EMPTY BOTTLE AND A GOLD DEVICE.");
+                    var ship = prompt ("");
                     if(blacksmith == "buy sword") {
                     alert("you bought a sword");
                     inventory.sword ++;
                     alert("swords = "+ inventory.sword);
                     }
                     break;
-                case "inn":
-                    "You enter the old and weathered inn. There's a woman at the front desk, stairs to the east, and an adjacent room to the west")
+                case "walk towards pond":
+                    alert("OTHER ROBOTS ARE WADING IN, SWIMMING WITH THE DUCKS ALREADY INHABITTING IT. SEEMS LIKE FUN.");
                     break;
-                case "stable":
-                    alert("at the stable")
+                case "hike up mountain":
+                    alert("YOU WITH THE OTHERS MAKE IT TO THE TOP, AND SEE A MASSIVE JUNGLE TO THE LEFT, ALONG WITH MORE MOUNTAINS AT THE RIGHT.")
                     break;
-                case "wood homes":
-                    alert("There are too many to choose from!")
+                case "pond":
+                    alert("OTHER ROBOTS ARE WADING IN, SWIMMING WITH THE DUCKS ALREADY INHABITTING IT. SEEMS LIKE FUN.")
                     break;
-                case "wooden homes";
-                    alert("There are too many to choose from!")
+                case "mountain";
+                    alert("YOU WITH THE OTHERS MAKE IT TO THE TOP, AND SEE A MASSIVE JUNGLE TO THE LEFT, ALONG WITH MORE MOUNTAINS AT THE RIGHT.")
                     break;
                 default;
                     alert("I don't know that command, sorry!")
