@@ -8,7 +8,7 @@ var preview = document.getElementById("preview");
 function Preview() {
     color = document.querySelector('input[name="colors"]:checked').value;
     console.log("The color is " + color);
-    preview.style.background = color:
+    preview.style.background = color;
 }
 
 function changeColor() {

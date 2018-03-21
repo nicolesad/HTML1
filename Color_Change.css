@@ -9,14 +9,14 @@ body {
 }
 
 .main {
-    border-radius: 3ps;
+    border-radius: 3px;
     padding: 10px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     width: 50%;
     height: 300;
     text-align: left;
-    background-color: deepskyblue;
+    background-color: #1a1a1a;
     margin: auto;
     box-shadow: 0 2px 5px rgba(0,0,0,0.6);
 }
@@ -31,16 +31,16 @@ body {
 
 .main input [type = "radio"] + .box {
     transition: all .4s ease-out;
-    border-radius: 13px;
 }
 
 .main input[type = "radio"]:hover + .box {
     transition: all .4s ease-out;
+    border-radius: 13px;
 }
 
 .main input[type = "radio"]:checked + .box {
-    transition: all .4s ease-out;
-    border-radius: 13px;
+    transition: ease all o.4s;
+    border-radius: 100%;
 }
 
 .main .box {
