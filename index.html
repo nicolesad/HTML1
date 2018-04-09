@@ -25,8 +25,8 @@
     var paddleX = (canvas.width-paddleWidth)/2;
     var rightPressed = false;
     var leftPressed = false;
-    var brickRowCount = 5;
-    var brickColumnCount = 3;
+    var brickRowCount = 7;
+    var brickColumnCount = 4;
     var brickWidth = 75;
     var brickHeight = 20;
     var brickPadding = 10;
@@ -95,14 +95,14 @@
     function drawBall() {
         ctx.beginPath();
         ctx.arc(x, y, ballRadius, 0, Math.PI*2);
-        ctx.fillStyle = "#FE99D7";
+        ctx.fillStyle = "#FE99B6";
         ctx.fill();
         ctx.closePath();
     }
     function drawPaddle() {
         ctx.beginPath();
         ctx.rect(paddleX, canvas.height-paddleHeight, paddleWidth, paddleHeight);
-        ctx.fillStyle = "#77D2FF";
+        ctx.fillStyle = "#B6FA99";
         ctx.fill();
         ctx.closePath();
     }
@@ -117,7 +117,7 @@
                 bricks[c][r].y = brickY;
                 ctx.beginPath();
                 ctx.rect(brickX, brickY, brickWidth, brickHeight);
-                ctx.fillStyle = "#FFF074";
+                ctx.fillStyle = "#99B6FA";
                 ctx.fill();
                 ctx.closePath();
                 }
@@ -126,13 +126,13 @@
     }
         function drawScore () {
         ctx.font = "16px Zapfino";
-        ctx.fillStyle = "#77D2FF";
+        ctx.fillStyle = "#FA99B6";
         ctx.fillText("Score: "+score, 8, 20);
     }
     
     function drawLives() {
         ctx.font = "16px Zapfino";
-        ctx.fillStyle = "#77D2FF";
+        ctx.fillStyle = "#FA99B6";
         ctx.fillText("Lives: "+lives, canvas.width-90, 20);
     }
 
@@ -171,11 +171,8 @@
                     dy = -5;
                     paddleX = (canvas.width-paddleWidth)/2;
                 }
-
             }
         }
-
-        
 
     if(rightPressed && paddleX < canvas.width-paddleWidth) {
         paddleX += 7;
